@@ -1,6 +1,6 @@
 //
 //  Configuration.swift
-//  GistTeste
+//  Comum configuration of network framework
 //
 //  Created by Paulo H.M. on 16/01/22.
 //
@@ -8,40 +8,32 @@
 import UIKit
 import Alamofire
     public struct Configuration {
-        static let base_url = "https://apiary.io/mockserver/%@"
-
+        //Github server
+        static let base_url = "https://api.github.com/gists"
     }
-
-
-public enum URLMapping: CaseIterable {
+//Mapring all url
+public enum URLMapping {
     case main
-    case logout
+    case detail(idGist: String)
+    
     var config: (url: String, method: APIMethod, encoding : ParameterEncoding) {
             switch self {
             case .main:
-                return ("/user/login", .get, URLEncoding() )
-            case .logout:
-                return ("/user/logout", .get, URLEncoding())
+                return ("/public", .get, URLEncoding() )
+            case .detail(let idGist):
+                return ("/\(idGist)", .get, URLEncoding())
         }
-    }
-}
-
-
-public class NetworkFactory{
-    public static func getInstante()->APIRequest{
-        return AlamoFireAPIRequest()
     }
 }
 ///Http Codes mapping
 enum ApiHTTPCodes : Int {
-    case invalidToken           = 401   //Status code 403
-    case accessDenied           = 402   //Status code 403
+    case invalidToken        = 401   //Status code 403
+    case accessDenied        = 402   //Status code 403
     case forbidden           = 403   //Status code 403
     case notFound            = 404   //Status code 404
     case conflict            = 409   //Status code 409
     case internalServerError = 500   //Status code 500
 }
- 
 /// Http methods mapping
 enum APIMethod : String, CaseIterable{
     case get = "GET"

@@ -1,6 +1,6 @@
 //
 //  RequestResult.swift
-//  GistTeste
+//  
 //
 //  Created by Paulo H.M. on 16/01/22.
 //

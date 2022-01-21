@@ -1,6 +1,6 @@
 //
 //  BaseCodable.swift
-//  GistTeste
+//  Mandatory Codable for working com network framework, generic limitation dont work with protocols
 //
 //  Created by Paulo H.M. on 16/01/22.
 //
@@ -15,6 +15,11 @@ public class BaseCodable : Codable{
     enum BaseCodable: CodingKey {
             case statusCode, message, code
      }
+    init() {
+        statusCode = 0
+        message = ""
+        code = 0
+    }
     /// required constructor for all codable mapping fields
     /// - Parameter decoder: decoder
     /// - Throws: decoding error
@@ -25,3 +30,4 @@ public class BaseCodable : Codable{
         self.code = try? container?.decodeIfPresent(Int.self, forKey: .code)
     }
 }
+

@@ -1,13 +1,13 @@
 //
 //  APIErrors.swift
-//  GistTeste
+//  Mapping network errors 
 //
 //  Created by Paulo H.M. on 16/01/22.
 //
 
 import UIKit
 
-/// Mapping comum request errors
+/// Mapping comum server side errors
 public enum RequestErrors : Error{
         case requestFailed(description: String)
         case jsonConversionFailure(description: String)

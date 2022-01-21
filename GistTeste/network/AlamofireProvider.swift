@@ -1,6 +1,6 @@
 //
 //  AlamofireProvider.swift
-//  GistTeste
+//  Framework create for ServerSide request usind Alamofire and Moya
 //
 //  Created by Paulo H.M. on 16/01/22.
 //
@@ -9,24 +9,39 @@ import Foundation
 import Alamofire
 import Moya
 
-/// protocoll for netwoork framework
+/// protocoll for network framework
 public protocol APIRequest {
     func sendRequest(_ requestData : RequestData<BaseCodable>, _ completion: @escaping (RequestResult) -> Void)
+
+    func sendRequestWithArray(_ requestData : RequestData<[BaseCodable]>, _ completion: @escaping (RequestResult) -> Void)
 }
 
 /// Alamofire Target implementation
 public class AlamoFireAPIRequest :  APIRequest, TargetType{
-    var requestData: RequestData<BaseCodable>? = nil
+    var requestData: RequestType? = nil
 
     init(){}
+    
+    public func sendRequestWithArray(_ requestData : RequestData<[BaseCodable]>, _ completion: @escaping (RequestResult) -> Void){
+        self.requestData = requestData
+        sendRequestToServer( { ret in
+            completion(ret)
+        })
+    }
     /// Send request to server using moya configuration
     /// - Parameters:
     ///   - requestData: structure contains request data
     ///   - completion: request result
     public func sendRequest(_ requestData: RequestData<BaseCodable>, _ completion: @escaping (RequestResult) -> Void) {
         self.requestData = requestData
-        //Show complete parameters if in debug mod
         
+        sendRequestToServer( { ret in
+            completion(ret)
+        })
+        //Show complete parameters if in debug mod
+    }
+
+    private func sendRequestToServer( _ completion: @escaping (RequestResult) -> Void){
         let provider : MoyaProvider<AlamoFireAPIRequest> = MoyaProvider<AlamoFireAPIRequest>()
         
         NetWorkUtil.checkInternetConnection({ ret  in
@@ -45,9 +60,15 @@ public class AlamoFireAPIRequest :  APIRequest, TargetType{
                                     default:
                                         break;
                                 }
-                                do {
-                                    let results = try JSONDecoder().decode(requestData.retType.self  , from: response.data)
-                                    completion(.successApi(results))
+                                do {// TODO: feito para contornar as limitações do Generics, fixe nas próximas versões do framework\
+                                    if let baseType = self.requestData as? RequestData<BaseCodable> {
+                                        let results = try JSONDecoder().decode ( Gist.self , from: response.data)
+                                        completion(.successApi(results))
+                                    }else if let baseType = self.requestData as?  RequestData<[BaseCodable]>{
+                                        let results = try JSONDecoder().decode ( [Gist] .self , from: response.data)
+                                        completion(.successApi(results))
+                                    }
+                        
                                 } catch let error {
                                     completion(.failureApi(.jsonConversionFailure(description: error.localizedDescription)))
                                 }
@@ -60,6 +81,7 @@ public class AlamoFireAPIRequest :  APIRequest, TargetType{
             }
         })
     }
+
     /// Task
     public var task: Task {
         return .requestParameters(parameters: requestData?.parameters ?? [:] , encoding: requestData!.url.config.encoding)
@@ -67,7 +89,7 @@ public class AlamoFireAPIRequest :  APIRequest, TargetType{
     
     /// Vee pay server URL config
     public var baseURL: URL {
-     return URL(string: Configuration.base_url)!
+        return URL(string: Configuration.base_url)!
     }
     ///Path for request
     public var path: String {
@@ -92,31 +114,4 @@ public class AlamoFireAPIRequest :  APIRequest, TargetType{
 }
 
 
-public struct RequestData<T: Decodable>{
-    //Http Headers
-    var headers :  [String: String]?
-    //Http parameters
-    var parameters : [String : Any]?
-    //Enum with url request
-    var url : URLMapping
-    //T type for request result
-    var retType : T.Type
-    //Dont remove this default header parameters!
-    public init(headers :  [String: String] = getDefaultHeaders(),
-         parameters : [String : Any]?,
-         url : URLMapping,
-         retType :  T.Type){
-        self.headers = headers
-        self.parameters = parameters
-        self.url = url
-        self.retType = retType
-    }
-    /// generate default headers
-    /// - Returns: map with headers
-    public static func getDefaultHeaders()->[String:String] {
-          let headers: [String:String] = [
-             "Content-type": "application/json"
-          ]
-          return headers
-      }
-}
+
