@@ -42,6 +42,7 @@ class DataSourceRealm : DataSource{
         favorite.content = file?.content ?? ""
         favorite.login = item.owner?.login ?? ""
         favorite.fileType = file?.type ?? ""
+        favorite.filename = file?.content ?? ""
 
         let localRealm = getRealm()
         try! localRealm.write {

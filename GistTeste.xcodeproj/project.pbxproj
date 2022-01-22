@@ -7,6 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8C0741E0279B6773003A308F /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 8C0741DF279B6773003A308F /* Realm */; };
+		8C0741E3279B6F19003A308F /* CombineMoya in Frameworks */ = {isa = PBXBuildFile; productRef = 8C0741E2279B6F19003A308F /* CombineMoya */; };
+		8C0741E5279B6F19003A308F /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 8C0741E4279B6F19003A308F /* Moya */; };
+		8C0741E7279B6F19003A308F /* ReactiveMoya in Frameworks */ = {isa = PBXBuildFile; productRef = 8C0741E6279B6F19003A308F /* ReactiveMoya */; };
+		8C0741E9279B6F19003A308F /* RxMoya in Frameworks */ = {isa = PBXBuildFile; productRef = 8C0741E8279B6F19003A308F /* RxMoya */; };
+		8C0741EC279B6F38003A308F /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 8C0741EB279B6F38003A308F /* Alamofire */; };
+		8C0741EF279C73CE003A308F /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0741EE279C73CD003A308F /* Color.swift */; };
+		8C0741F4279C79F3003A308F /* Supria Sans Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8C0741F1279C79F3003A308F /* Supria Sans Bold.otf */; };
+		8C0741F5279C79F3003A308F /* Supria Sans Regular Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8C0741F2279C79F3003A308F /* Supria Sans Regular Italic.otf */; };
+		8C0741F6279C79F3003A308F /* Supria Sans Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8C0741F3279C79F3003A308F /* Supria Sans Regular.otf */; };
+		8C0741FA279C7FBD003A308F /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C0741F9279C7FBD003A308F /* Launch Screen.storyboard */; };
+		8C0741FC279C948B003A308F /* ExpandableText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0741FB279C948A003A308F /* ExpandableText.swift */; };
 		8C43EFD6279AEC9700C10034 /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C43EFD5279AEC9700C10034 /* DataSource.swift */; };
 		8C43EFDB279AF03B00C10034 /* GistFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C43EFDA279AF03B00C10034 /* GistFactory.swift */; };
 		8C43EFE1279B3B2B00C10034 /* RequestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C43EFE0279B3B2B00C10034 /* RequestData.swift */; };
@@ -18,9 +30,6 @@
 		8C83B5872794B08500F86BE6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C83B5862794B08500F86BE6 /* Assets.xcassets */; };
 		8C83B58A2794B08500F86BE6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C83B5892794B08500F86BE6 /* Preview Assets.xcassets */; };
 		8C83B5B52794B8EB00F86BE6 /* AlamofireProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C83B5B42794B8EB00F86BE6 /* AlamofireProvider.swift */; };
-		8C88FF3D2794FAA80037F724 /* CombineMoya in Frameworks */ = {isa = PBXBuildFile; productRef = 8C88FF3C2794FAA80037F724 /* CombineMoya */; };
-		8C88FF3F2794FAA80037F724 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 8C88FF3E2794FAA80037F724 /* Moya */; };
-		8C88FF412794FAA80037F724 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 8C88FF402794FAA80037F724 /* Alamofire */; };
 		8C88FF4D2794FB590037F724 /* NetWorkUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C88FF4C2794FB590037F724 /* NetWorkUtil.swift */; };
 		8C88FF512794FBB20037F724 /* RequestResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C88FF502794FBB20037F724 /* RequestResult.swift */; };
 		8C88FF552794FBE10037F724 /* RequestErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C88FF542794FBE10037F724 /* RequestErrors.swift */; };
@@ -48,6 +57,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8C0741EE279C73CD003A308F /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		8C0741F1279C79F3003A308F /* Supria Sans Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Supria Sans Bold.otf"; sourceTree = "<group>"; };
+		8C0741F2279C79F3003A308F /* Supria Sans Regular Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Supria Sans Regular Italic.otf"; sourceTree = "<group>"; };
+		8C0741F3279C79F3003A308F /* Supria Sans Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Supria Sans Regular.otf"; sourceTree = "<group>"; };
+		8C0741F7279C7B25003A308F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		8C0741F9279C7FBD003A308F /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		8C0741FB279C948A003A308F /* ExpandableText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandableText.swift; sourceTree = "<group>"; };
 		8C43EFD5279AEC9700C10034 /* DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
 		8C43EFDA279AF03B00C10034 /* GistFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GistFactory.swift; sourceTree = "<group>"; };
 		8C43EFE0279B3B2B00C10034 /* RequestData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestData.swift; sourceTree = "<group>"; };
@@ -83,10 +99,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C0741E9279B6F19003A308F /* RxMoya in Frameworks */,
+				8C0741EC279B6F38003A308F /* Alamofire in Frameworks */,
 				8CAF0523279AE56F009E1316 /* RealmSwift in Frameworks */,
-				8C88FF412794FAA80037F724 /* Alamofire in Frameworks */,
-				8C88FF3F2794FAA80037F724 /* Moya in Frameworks */,
-				8C88FF3D2794FAA80037F724 /* CombineMoya in Frameworks */,
+				8C0741E0279B6773003A308F /* Realm in Frameworks */,
+				8C0741E5279B6F19003A308F /* Moya in Frameworks */,
+				8C0741E7279B6F19003A308F /* ReactiveMoya in Frameworks */,
+				8C0741E3279B6F19003A308F /* CombineMoya in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,6 +119,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8C0741F0279C79CE003A308F /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				8C0741F1279C79F3003A308F /* Supria Sans Bold.otf */,
+				8C0741F2279C79F3003A308F /* Supria Sans Regular Italic.otf */,
+				8C0741F3279C79F3003A308F /* Supria Sans Regular.otf */,
+			);
+			path = resources;
+			sourceTree = "<group>";
+		};
+		8C0741F8279C7FAB003A308F /* launch */ = {
+			isa = PBXGroup;
+			children = (
+				8C0741F9279C7FBD003A308F /* Launch Screen.storyboard */,
+			);
+			path = launch;
+			sourceTree = "<group>";
+		};
 		8C43EFD4279AEC8300C10034 /* datasource */ = {
 			isa = PBXGroup;
 			children = (
@@ -120,6 +157,7 @@
 		8C43EFDE279B199F00C10034 /* ui */ = {
 			isa = PBXGroup;
 			children = (
+				8C0741FB279C948A003A308F /* ExpandableText.swift */,
 			);
 			path = ui;
 			sourceTree = "<group>";
@@ -127,6 +165,7 @@
 		8C43EFDF279B3AC400C10034 /* extensions */ = {
 			isa = PBXGroup;
 			children = (
+				8C0741EE279C73CD003A308F /* Color.swift */,
 			);
 			path = extensions;
 			sourceTree = "<group>";
@@ -154,6 +193,9 @@
 		8C83B5812794B08100F86BE6 /* GistTeste */ = {
 			isa = PBXGroup;
 			children = (
+				8C0741F8279C7FAB003A308F /* launch */,
+				8C0741F7279C7B25003A308F /* Info.plist */,
+				8C0741F0279C79CE003A308F /* resources */,
 				8C43EFDF279B3AC400C10034 /* extensions */,
 				8C43EFDE279B199F00C10034 /* ui */,
 				8C43EFD9279AF02A00C10034 /* factory */,
@@ -285,10 +327,13 @@
 			);
 			name = GistTeste;
 			packageProductDependencies = (
-				8C88FF3C2794FAA80037F724 /* CombineMoya */,
-				8C88FF3E2794FAA80037F724 /* Moya */,
-				8C88FF402794FAA80037F724 /* Alamofire */,
 				8CAF0522279AE56F009E1316 /* RealmSwift */,
+				8C0741DF279B6773003A308F /* Realm */,
+				8C0741E2279B6F19003A308F /* CombineMoya */,
+				8C0741E4279B6F19003A308F /* Moya */,
+				8C0741E6279B6F19003A308F /* ReactiveMoya */,
+				8C0741E8279B6F19003A308F /* RxMoya */,
+				8C0741EB279B6F38003A308F /* Alamofire */,
 			);
 			productName = GistTeste;
 			productReference = 8C83B57F2794B08100F86BE6 /* GistTeste.app */;
@@ -346,9 +391,9 @@
 			);
 			mainGroup = 8C83B5762794B08100F86BE6;
 			packageReferences = (
-				8C83B5B22794B1F800F86BE6 /* XCRemoteSwiftPackageReference "Moya" */,
-				8C83B5B82794BADB00F86BE6 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				8CAF0521279AE56F009E1316 /* XCRemoteSwiftPackageReference "realm-swift" */,
+				8C0741E1279B6F19003A308F /* XCRemoteSwiftPackageReference "Moya" */,
+				8C0741EA279B6F38003A308F /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = 8C83B5802794B08100F86BE6 /* Products */;
 			projectDirPath = "";
@@ -365,7 +410,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C0741FA279C7FBD003A308F /* Launch Screen.storyboard in Resources */,
+				8C0741F6279C79F3003A308F /* Supria Sans Regular.otf in Resources */,
 				8C83B58A2794B08500F86BE6 /* Preview Assets.xcassets in Resources */,
+				8C0741F4279C79F3003A308F /* Supria Sans Bold.otf in Resources */,
+				8C0741F5279C79F3003A308F /* Supria Sans Regular Italic.otf in Resources */,
 				8C83B5872794B08500F86BE6 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -390,6 +439,7 @@
 				8C88FF512794FBB20037F724 /* RequestResult.swift in Sources */,
 				8C88FF5D279507DA0037F724 /* BaseCodable.swift in Sources */,
 				8C88FF4D2794FB590037F724 /* NetWorkUtil.swift in Sources */,
+				8C0741FC279C948B003A308F /* ExpandableText.swift in Sources */,
 				8CEA70DC2797435D00DC633F /* MainViewModel.swift in Sources */,
 				8C88FF59279500F50037F724 /* Configuration.swift in Sources */,
 				8C83B5852794B08100F86BE6 /* ContentView.swift in Sources */,
@@ -397,6 +447,7 @@
 				8C8D7F2C27961CD9004DF670 /* GitService.swift in Sources */,
 				8C83B5B52794B8EB00F86BE6 /* AlamofireProvider.swift in Sources */,
 				8C43EFE1279B3B2B00C10034 /* RequestData.swift in Sources */,
+				8C0741EF279C73CE003A308F /* Color.swift in Sources */,
 				8C43EFDB279AF03B00C10034 /* GistFactory.swift in Sources */,
 				8C83B5832794B08100F86BE6 /* GistTesteApp.swift in Sources */,
 				8C43EFE8279B4FBC00C10034 /* Favorite.swift in Sources */,
@@ -598,9 +649,10 @@
 				DEVELOPMENT_TEAM = GXT8NJ3QKY;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GistTeste/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -627,9 +679,10 @@
 				DEVELOPMENT_TEAM = GXT8NJ3QKY;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GistTeste/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -729,6 +782,22 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		8C0741E1279B6F19003A308F /* XCRemoteSwiftPackageReference "Moya" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Moya/Moya.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		8C0741EA279B6F38003A308F /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 		8C83B5B22794B1F800F86BE6 /* XCRemoteSwiftPackageReference "Moya" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Moya/Moya.git";
@@ -756,19 +825,34 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		8C88FF3C2794FAA80037F724 /* CombineMoya */ = {
+		8C0741DF279B6773003A308F /* Realm */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 8C83B5B22794B1F800F86BE6 /* XCRemoteSwiftPackageReference "Moya" */;
+			package = 8CAF0521279AE56F009E1316 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
+		};
+		8C0741E2279B6F19003A308F /* CombineMoya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8C0741E1279B6F19003A308F /* XCRemoteSwiftPackageReference "Moya" */;
 			productName = CombineMoya;
 		};
-		8C88FF3E2794FAA80037F724 /* Moya */ = {
+		8C0741E4279B6F19003A308F /* Moya */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 8C83B5B22794B1F800F86BE6 /* XCRemoteSwiftPackageReference "Moya" */;
+			package = 8C0741E1279B6F19003A308F /* XCRemoteSwiftPackageReference "Moya" */;
 			productName = Moya;
 		};
-		8C88FF402794FAA80037F724 /* Alamofire */ = {
+		8C0741E6279B6F19003A308F /* ReactiveMoya */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 8C83B5B82794BADB00F86BE6 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			package = 8C0741E1279B6F19003A308F /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = ReactiveMoya;
+		};
+		8C0741E8279B6F19003A308F /* RxMoya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8C0741E1279B6F19003A308F /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = RxMoya;
+		};
+		8C0741EB279B6F38003A308F /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8C0741EA279B6F38003A308F /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
 		};
 		8C88FF422794FACD0037F724 /* CombineMoya */ = {

@@ -16,8 +16,9 @@ class Favorite: Object, Identifiable {
     dynamic var content : String = ""
     dynamic var login : String = ""
     dynamic var type : String = ""
+    dynamic var filename : String = ""
 
-    convenience init(idGist: String, ownerUrlPhoto : String, content : String, login : String, type : String ) {
+    convenience init(idGist: String, ownerUrlPhoto : String, content : String, login : String, type : String, filename : String ) {
         self.init()
         self.idGist = idGist
         self.ownerUrlPhoto = ownerUrlPhoto
@@ -25,6 +26,7 @@ class Favorite: Object, Identifiable {
         self.content = content
         self.login = login
         self.type = type
+        self.filename = filename
     }
 
 }

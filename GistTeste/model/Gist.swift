@@ -88,9 +88,10 @@ class FileDetail : BaseCodable, Identifiable {
     var size : String?
     var truncated : String?
     var content : String?
+    var filename : String?
 
     enum FileDetail: CodingKey {
-        case  type, language, raw_url, size,truncated, content
+        case  type, language, raw_url, size,truncated, content, filename
      }
     /// required constructor for all codable mapping fields
     /// - Parameter decoder: decoder
@@ -104,5 +105,7 @@ class FileDetail : BaseCodable, Identifiable {
         self.size = try? container?.decodeIfPresent(String.self, forKey: .size)
         self.truncated = try? container?.decodeIfPresent(String.self, forKey: .truncated)
         self.content = try? container?.decodeIfPresent(String.self, forKey: .content)
+        self.filename = try? container?.decodeIfPresent(String.self, forKey: .filename)
+        
     }
 }

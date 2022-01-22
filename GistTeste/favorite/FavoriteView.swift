@@ -19,7 +19,6 @@ struct FavoriteView: View {
             .padding()
         
         List(viewModel.favoriteList){ favorite in
-            Text( favorite.ownerUrlPhoto)
             Section(header: Text(favorite.login)) {
                 VStack {
                     AsyncImage(url: URL(string: favorite.ownerUrlPhoto)) { image in
@@ -30,9 +29,18 @@ struct FavoriteView: View {
                     .frame(width: 64, height: 64)
                     .clipShape(RoundedRectangle(cornerRadius: 32))
                 }
-                Text(favorite.fileType)
+                Spacer()
+                Text(favorite.filename)
+                    .padding(8)
+                    .font(.custom("Supria Sans Bold", size: 12))
+                Text(" - " + favorite.fileType)
                 ScrollView {
-                    Text( favorite.content).lineLimit(nil)
+                    ExpandableText(text: favorite.content)
+                        .padding(8)
+                        .font(.body)
+                        .foregroundColor(Color(hex:"0D0D0E"))
+                        .animation(Animation.easeInOut(duration: 0.5), value: true )
+                        .background(Color.white)
                 }
             }
         }.onAppear(perform: loadData)
