@@ -29,11 +29,13 @@ struct FavoriteView: View {
                     .frame(width: 64, height: 64)
                     .clipShape(RoundedRectangle(cornerRadius: 32))
                 }
-                Spacer()
                 Text(favorite.filename)
                     .padding(8)
-                    .font(.custom("Supria Sans Bold", size: 12))
+                    .font(.custom("Supria Sans Regular", size: 12))
+                    .foregroundColor(Color(hex:"0D0D0E"))
                 Text(" - " + favorite.fileType)
+                    .foregroundColor(Color(hex:"0D0D0E"))
+                    .font(.custom("Supria Sans Regular", size: 12))
                 ScrollView {
                     ExpandableText(text: favorite.content)
                         .padding(8)
@@ -44,6 +46,9 @@ struct FavoriteView: View {
                 }
             }
         }.onAppear(perform: loadData)
+            .font(.custom("Supria Sans Regular", size: 16))
+            .foregroundColor(Color(hex:"0D0D0E"))
+        
     }
     
     private func loadData() {

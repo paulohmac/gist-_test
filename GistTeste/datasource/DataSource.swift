@@ -14,6 +14,7 @@ protocol DataSource{
     func saveFavorite(item : Gist)
     func deleteFavorite(item : Gist)
     func itemExists(id : String)->Bool
+    func update(item : Gist)
 }
 
 class DataSourceRealm : DataSource{
@@ -42,13 +43,40 @@ class DataSourceRealm : DataSource{
         favorite.content = file?.content ?? ""
         favorite.login = item.owner?.login ?? ""
         favorite.fileType = file?.type ?? ""
-        favorite.filename = file?.content ?? ""
+        favorite.filename = file?.filename ?? ""
 
         let localRealm = getRealm()
         try! localRealm.write {
             localRealm.add(favorite)
         }
     }
+
+    func update(item : Gist){
+         var file : FileDetail?
+
+         let realm = getRealm()
+         let productsInRealmDatabase = getRealm().objects(Favorite.self)
+         let favorite = productsInRealmDatabase.filter("idGist == %@", item.id).first
+
+         if let key = item.files.keys.first, let item = item.files[key] {
+             file = item
+         }
+         
+         if let favorite = favorite{
+             
+             do {
+                 try realm.write {
+                     favorite.ownerUrlPhoto = item.owner?.avatarUrl ?? ""
+                     favorite.content = file?.content ?? ""
+                     favorite.login = item.owner?.login ?? ""
+                     favorite.fileType = file?.type ?? ""
+                     favorite.filename = file?.filename ?? ""
+                 }
+             } catch {
+                 // error Handling
+             }
+         }
+     }
     
     func deleteFavorite(item : Gist){
         let list = getRealm().objects(Favorite.self)

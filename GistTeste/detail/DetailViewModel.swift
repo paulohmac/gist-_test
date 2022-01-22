@@ -27,6 +27,7 @@ class DetailViewModel: ObservableObject {
                 self.isLoadingPage = false
                 if let ret = ret {
                     self.gistDetail = ret
+                    self.updateGistData(gistDetail: ret)
                 }else if let error = error{
                     self.showError = true
                     self.error = error
@@ -35,7 +36,13 @@ class DetailViewModel: ObservableObject {
             })
         }
     }
-    
+
+    // MARK: - Persitence of Favorite data
+    public func  updateGistData(gistDetail : Gist){
+        if let dataSource =  GistFactory.dataSource.getInstance() as? DataSource {
+            dataSource.update(item: gistDetail)
+        }
+    }
     
     
 }
